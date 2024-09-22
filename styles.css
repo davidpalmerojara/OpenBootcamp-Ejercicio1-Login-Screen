@@ -1,0 +1,257 @@
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+    font-family: 'Raleway', sans-serif;
+    transition: ease-in-out 0.2s;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: url("./background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.login {
+    height: 100vh;
+    width: 23%;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+}
+
+h1 {
+    margin: 0px 0 50px 0;
+    color: #121625;
+    font-weight: 400;
+    font-size: 24px;
+}
+h1 > span {
+    color: #32D5A4;
+    font-weight: 800;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form > input {
+    margin: 8px 0 15px 0;
+    padding: 12px 12px;
+    background-color: #F8F8F9;
+    border: none;
+    border-radius: 8px;
+    font-family: Raleway;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 22px;
+letter-spacing: 0.005em;
+text-align: left;
+
+}
+
+.form > input:focus, .form > input:active {
+    box-shadow: 0 0 2px #32D5A4;
+    border: 1px solid;
+    border-color: #32D5A4 !important;
+    outline: none !important;
+}
+
+.form > input:checked {
+    background-color: turquoise;
+    color: turquoise;
+}
+
+.form > label {
+    margin: 8px 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: #121625;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    text-align: left;
+
+}
+
+.form > fieldset {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    border: none;
+}
+
+.form > button {
+    border-radius: 8px;
+    background: #32D5A4;
+    color: white;
+    padding: 12px;
+    border: none;
+    margin: 15px 0;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0em;
+}
+
+.form > button:hover {
+    background-color: #29ad86;
+}
+.form-link {
+    color: #32D4A4;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.form-link:hover {
+    color: #29ad86;
+}
+
+.loginForm {
+    width: 100%;
+}
+
+.check {
+    height: 12px;
+    width: 12px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border: 1px solid #34495E;
+    border-radius: 2px;
+    outline: none;
+    transition-duration: 0.3s;
+    background-color: white;
+    color: #F8F8F9;
+    cursor: pointer;
+}
+
+.check:checked {
+    border: 1px solid #29ad86;
+    background-color: #29ad86;
+}
+
+
+span {
+    pointer-events: none;
+}
+.check:checked + span::before {
+    content: '\2713';
+    color: white;
+    position: absolute;
+    left: 3px;
+top: 1px;
+font-size: 10px;
+}
+
+
+
+.checkbox {
+    margin-left: 10px;
+
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+}
+
+.checkbox-div {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.foot {
+    align-self: flex-start;
+    justify-self: flex-end;
+}
+
+.footer-text {
+    color: #A5A8B3;
+    font-size: 10px;
+    margin: 5px 0;
+}
+
+.footer-text > a {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media (max-width: 575.98px) { 
+    .login {
+        width: 100%;
+        padding: 0;
+    }
+
+    h1 {
+        padding: 0 20px;
+    }
+    
+    .form {
+        padding: 0 20px;
+    }
+
+    .foot {
+        padding: 0 20px;
+    }
+ }
+
+
+@media (min-width: 575.98px) and (max-width: 767.98px) { 
+    .login {
+        width: 100%;
+        padding: 0;
+    }
+
+    h1 {
+        padding: 0 60px;
+    }
+    
+    .form {
+        padding: 0 60px;
+    }
+
+    .foot {
+        padding: 0 60px;
+    }
+ }
+
+
+@media (min-width: 767.98px) and (max-width: 991.98px) { 
+    .login {
+        width: calc(50% - 80px);
+        padding: 40px;
+    }
+ }
+
+
+@media (min-width: 991.98px) and (max-width: 1317.98px) { 
+    .login {
+        width: calc(50% - 80px);
+        padding: 40px;
+    }
+ }
+
+ @media only screen and (orientation: landscape) and (max-width: 1317.98px) {
+     .wrapper {
+         height: calc(100vw - 80px);
+     }
+     .login {
+        height: calc(100vw - 80px);
+     }
+ }
